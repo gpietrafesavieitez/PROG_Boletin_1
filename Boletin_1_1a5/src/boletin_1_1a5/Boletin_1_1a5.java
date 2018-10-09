@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Boletin_1_1a5 { //Comentario de prueba 1
     
+    public static Scanner leer = new Scanner(System.in);
+    
     //Area triángulo
     public static void ejer1(){ 
         int base = 3, alt = 4;
@@ -18,12 +20,11 @@ public class Boletin_1_1a5 { //Comentario de prueba 1
     //Conversión euros a dólares
     public static void ejer3(){
         float euros, cambio;
-        Scanner leer = new Scanner(System.in);
         
         do{ //Validación
             System.out.print("Introduce la cantidad en euros: ");
             euros = leer.nextFloat();
-            System.out.print("Introduce la cantidad el cambio: ");
+            System.out.print("Introduce el cambio: ");
             cambio = leer.nextFloat();
         }while(euros < 0 || cambio < 0); //No puede ser negativo
         System.out.println("- " + euros + " euros son aproximadamente " + (euros * cambio) + " dólares.");
@@ -31,7 +32,6 @@ public class Boletin_1_1a5 { //Comentario de prueba 1
     
     //Calculín
     public static void ejer4(){
-        Scanner leer = new Scanner(System.in);
  
         System.out.println("Introduce número 1: ");
         float num1 = leer.nextInt();
@@ -42,15 +42,13 @@ public class Boletin_1_1a5 { //Comentario de prueba 1
     
     //Conversión millas a metros
     public static void ejer5(){
-        Scanner leer = new Scanner(System.in);
 
-        System.out.println("Introduce la cantidad en millas: ");
+        System.out.println("Introduce la cantidad en millas marinas: ");
         float millas = leer.nextInt();
-        System.out.println("- " + millas + " millas son aproximadamente " + (millas * 1852) + " metros.");
+        System.out.println("- " + millas + " millas marinas son aproximadamente " + (millas * 1852) + " metros.");
     }
 
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
         int key;
         
         do{
@@ -65,7 +63,7 @@ public class Boletin_1_1a5 { //Comentario de prueba 1
                 case 3: ejer3(); break;
                 case 4: ejer4(); break;
                 case 5: ejer5(); break;
-                default: System.out.println("Selecciona una opción válida"); break;
+                default: System.out.println("Selecciona una opción válida!"); break;
                }
             
         }while(key != 0);
