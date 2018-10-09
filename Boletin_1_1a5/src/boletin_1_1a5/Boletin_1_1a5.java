@@ -1,7 +1,7 @@
 package boletin_1_1a5;
 import java.util.Scanner;
 
-public class Boletin_1_1a5 { // Comentario de prueba
+public class Boletin_1_1a5 { //Comentario de prueba 1
     
     //Area triángulo
     public static void ejer1(){ 
