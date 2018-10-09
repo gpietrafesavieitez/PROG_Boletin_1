@@ -1,7 +1,7 @@
 package boletin_1_1a5;
 import java.util.Scanner;
 
-public class Boletin_1_1a5 { //Comentario de prueba 1
+public class Boletin_1_1a5 {
     
     public static Scanner leer = new Scanner(System.in);
     
@@ -22,29 +22,26 @@ public class Boletin_1_1a5 { //Comentario de prueba 1
         float euros, cambio;
         
         do{ //Validación
-            System.out.print("Introduce la cantidad en euros: ");
-            euros = leer.nextFloat();
-            System.out.print("Introduce el cambio: ");
-            cambio = leer.nextFloat();
+            System.out.print("Introduce la cantidad en euros: "); euros = leer.nextFloat();
+            System.out.print("Introduce el cambio: "); cambio = leer.nextFloat();
+            
         }while(euros < 0 || cambio < 0); //No puede ser negativo
+        
         System.out.println("- " + euros + " euros son aproximadamente " + (euros * cambio) + " dólares.");
     }
     
     //Calculín
     public static void ejer4(){
  
-        System.out.println("Introduce número 1: ");
-        float num1 = leer.nextInt();
-        System.out.println("Introduce número 2: ");
-        float num2 = leer.nextInt();
+        System.out.print("Introduce número 1: "); float num1 = leer.nextInt();
+        System.out.print("Introduce número 2: "); float num2 = leer.nextInt();
         System.out.println("- Suma = " + (num1 + num2) + "\n- Resta = " + (num1 - num2) + "\n- Producto = " + (num1 * num2) + "\n- División = " + (num1 / num2));
     }
     
     //Conversión millas a metros
     public static void ejer5(){
 
-        System.out.println("Introduce la cantidad en millas marinas: ");
-        float millas = leer.nextInt();
+        System.out.print("Introduce la cantidad en millas marinas: "); float millas = leer.nextInt();
         System.out.println("- " + millas + " millas marinas son aproximadamente " + (millas * 1852) + " metros.");
     }
 
@@ -52,18 +49,17 @@ public class Boletin_1_1a5 { //Comentario de prueba 1
         int key;
         
         do{
-            System.out.println("\n[1] Ejercicio 1\n[2] Ejercicio 2\n[3] Ejercicio 3\n[4] Ejercicio 4\n[5] Ejercicio 5\n[0] Salir");
-            
-            key = leer.nextInt();
+            System.out.println("\n[1] Ejercicio 1\n[2] Ejercicio 2\n[3] Ejercicio 3\n[4] Ejercicio 4\n[5] Ejercicio 5\n[0] Salir\n"); key = leer.nextInt();
             
             switch(key){
-                case 0: System.out.println("Hasta luego!"); break;
+                case 0: System.out.print("Hasta luego!"); break;
                 case 1: ejer1(); break;
                 case 2: ejer2(); break;
                 case 3: ejer3(); break;
                 case 4: ejer4(); break;
                 case 5: ejer5(); break;
-                default: System.out.println("Selecciona una opción válida!"); break;
+                default: System.out.print("Selecciona una opción válida!"); break;
+                
                }
             
         }while(key != 0);
