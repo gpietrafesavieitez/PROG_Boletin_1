@@ -7,7 +7,7 @@ public class Boletin_1_1a5 {
     
     //Area triángulo
     public static void ejer1(){ 
-        int base = 3, alt = 4;
+        int base = 4, alt = 3;
         System.out.println("- El área del triángulo es de " + (base * alt) / 2 + " unidades.");
     }
     
